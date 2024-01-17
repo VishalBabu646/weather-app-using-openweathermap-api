@@ -1,3 +1,4 @@
+const API_KEY = '8f56cee362a557325d51f7332596d8b8';
 var cityInputMobile = document.getElementById("mobileSearchCity");
 
 cityInputMobile.addEventListener("keyup", function(event)
