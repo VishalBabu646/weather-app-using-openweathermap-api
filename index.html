@@ -1,218 +1,854 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Weather App Using OpenWeatherMap API</title>
 
-    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    <!--Head section-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vishal Babu S</title>
+        <meta name="description"
+            content="Vishal Babu S - Full Stack Developer specializing in JavaScript, React, Node.js, and Python">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg fixed-top custom-navbar"
+            id="mainNav">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#home">Vishal Babu S</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#timeline">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="prefetch" href="media/day1.jpg">
-    <link rel="prefetch" href="media/day2.jpg">
-    <link rel="prefetch" href="media/day3.jpg">
-    <link rel="prefetch" href="media/day4.jpg">
-    <link rel="prefetch" href="media/day5.jpg">
-    <link rel="prefetch" href="media/night1.jpg">
-    <link rel="prefetch" href="media/night2.jpg">
-    <link rel="prefetch" href="media/night3.jpg">
-    <link rel="prefetch" href="media/night4.jpg">
-    <link rel="prefetch" href="media/night5.jpg">
-    <link rel="prefetch" href="media/rainy1.jpg">
-    <link rel="prefetch" href="media/rainy2.jpg">
-    <link rel="prefetch" href="media/rainy3.jpg">
-    <link rel="prefetch" href="media/rainy4.jpg">
-    <link rel="prefetch" href="media/rainy5.jpg">
-    <link rel="prefetch" href="media/cloudy1.jpg">
-    <link rel="prefetch" href="media/cloudy2.jpg">
-    <link rel="prefetch" href="media/cloudy3.jpg">
-    <link rel="prefetch" href="media/cloudy4.jpg">
-    <link rel="prefetch" href="media/cloudy5.jpg">
-    <link rel="prefetch" href="icons/loader.gif">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div id="vanta-globe"></div>
+            <div class="hero-overlay"></div>
+            <div class="container h-100">
+                <div
+                    class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h1 class="hero-title" data-aos="fade-up">
+                            Hi! I'm <span class="neon-text">Vishal Babu S</span>
+                        </h1>
+                        <p class="hero-subtitle" data-aos="fade-up"
+                            data-aos-delay="200">
+                            Biomedical Engineering Student | MERN Stack
+                            Developer
+                            • Aspiring Software Engineer • Problem
+                            Solving
+                            <div class="hero-buttons" data-aos="fade-up"
+                                data-aos-delay="400">
+                                <a href="#projects"
+                                    class="btn btn-primary btn-lg me-3">View
+                                    Projects</a>
+                                <a href="#contact"
+                                    class="btn btn-outline-light btn-lg">Get In
+                                    Touch</a>
+                            </div>
+                            <div class="scroll-indicator" data-aos="fade-up"
+                                data-aos-delay="600">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+            <!-- About Section -->
+            <section id="about" class="section-padding">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 text-center mb-4 mb-lg-0"
+                            data-aos="fade-right">
+                            <div class="profile-image-wrapper">
+                                <img src="images/yukta.jpeg" alt="Vishal Babu S"
+                                    class="profile-image">
+                                <div class="profile-border"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8" data-aos="fade-left">
+                            <h2 class="section-title">
+                                <span id="typewriter"></span>
+                            </h2>
+                            <p class="lead mb-4">
+                                Hi there! I'm Vishal Babu S, a passionate IT
+                                student from Coimbatore with a strong interest
+                                in
+                                software development and creative technologies.
+                                I enjoy turning ideas into real, functional
+                                solutions</p>
+                            <p class="mb-4">
+                                I'm currently pursuing my BE in Biomedical
+                                Engineering at PSG College of Technology,
+                                Coimbatore. I have a keen interest in full-stack
+                                development, particularly with technologies like
+                                React, Node.js, and Python. My journey in tech
+                                has been fueled by a love for problem-solving
+                                and a desire to create impactful applications.
+                            </p>
+                            <p class="mb-4">
+                                I'm passionate about <span class="highlight">AWS
+                                    , React, ExpressJS, SQL</span>, and
+                                I'm always eager to learn new technologies and
+                                improve my skills. Whether it's building web
+                                applications, exploring cloud computing, I'm
+                                excited about the endless
+                                possibilities in the tech world.
+                            </p>
+                            <div class="social-links">
+                                <a href="https://instagram.com/yuki.gaikwad"
+                                    class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/vishal-babu-s-6a4153273/"
+                                    class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://github.com/VishalBabu646"
+                                    class="social-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <style>
-      body
-      {
-        /* background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) , url('media/day1.jpg'); */
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        
-        /* Added background-repeat and set it to no-repeat to help prevent the images from duplicating. I added !important to 
-         * background-repeat and background-size in order to place importance on the background images not repeating and
-         * to cover the entire webpage. 
-         */
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        background-attachment: fixed;
+            <!--TechStack Section-->
+            <section id="tech-stack"
+                class="bg-black text-white py-20 px-6 relative overflow-hidden">
+                <div class="max-w-7xl mx-auto">
+                    <!-- Section Header -->
+                    <div class="text-center mb-16">
+                        <h2
+                            class="text-4xl md:text-5xl font-bold mb-4 tech-title">
+                            <span
+                                class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                                Tech Stack
+                            </span>
+                        </h2>
+                        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                            Technologies and tools I use to bring ideas to life
+                        </p>
+                    </div>
 
-				height: 100vh;
-      }
-			@media (max-width: 600px)
-			{
-				body
-				{
-					height: 100%;
-				}
-			}
-    </style>
-  </head>
-  <body>
-    <ul class="navbar">
-      <li style="float: left; margin-left: -10px;" class="forecast"><a class="repo-link" href="https://github.com/kshitizrohilla/weather-app-using-openweathermap-api/">⛄ Forecast</a></li>
-      <li><a href="#">⟳</a></li>
-      <li><a href="#">☆<!--★--></a></li>
-      <li><a href="#">···</a></li>
-      <li><input spellcheck="false" class="search-city" id="searchCity" type="text" autocomplete="off" placeholder="🔍︎ Search City"></li>
-    </ul>
+                    <!-- Navigation Pills -->
+                    <div class="flex flex-wrap justify-center gap-4 mb-12">
+                        <button class="nav-pill"
+                            data-category="all">All</button>
+                        <button class="nav-pill"
+                            data-category="frontend">Frontend</button>
+                        <button class="nav-pill"
+                            data-category="backend">Backend</button>
+                        <button class="nav-pill"
+                            data-category="database">Database</button>
+                        <button class="nav-pill"
+                            data-category="tools">Tools</button>
+                    </div>
+                    <br>
+                    <br>
+                    <!-- Tech Grid -->
+                    <div
+                        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
+                        id="tech-grid">
+                        <!-- Frontend Technologies -->
+                        <div class="tech-card" data-category="frontend">
+                            <div class="tech-icon">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </div>
+                            <span class="tech-name">JavaScript</span>
+                        </div>
 
-		<ul class="mobile-navbar">
-      <li><input spellcheck="false" class="mobile-search-city" id="mobileSearchCity" type="text" autocomplete="off" placeholder="Search City..."></li>
-    </ul>
+                        <div class="tech-card" data-category="frontend">
+                            <div class="tech-icon">
+                                <i class="devicon-react-original colored"></i>
+                            </div>
+                            <span class="tech-name">React</span>
+                        </div>
 
-    <h1 class="location-name" id="locationName">Search City...</h1>
+                        <div class="tech-card" data-category="frontend">
+                            <div class="tech-icon">
+                                <i
+                                    class="devicon-tailwindcss-plain colored"></i>
+                            </div>
+                            <span class="tech-name">Tailwind CSS</span>
+                        </div>
 
-    <div class="temperature-container">
-      <div class="temperature-icon"><img class="imgs-as-icons" src="icons/sunny.png"></div>
-      <div class="temperature-value" id="temperatureValue"></div>
-    </div>
+                        <div class="tech-card" data-category="frontend">
+                            <div class="tech-icon">
+                                <i class="devicon-html5-plain colored"></i>
+                            </div>
+                            <span class="tech-name">HTML5</span>
+                        </div>
 
-    <h2 class="weather-type" id="weatherType"></h2>
+                        <div class="tech-card" data-category="frontend">
+                            <div class="tech-icon">
+                                <i class="devicon-css-plain colored"></i>
+                            </div>
+                            <span class="tech-name">CSS</span>
+                        </div>
 
-    <div class="additionals-first-row">
-      <span class="air-quality-additional">
-        <span class="air-quality-additional-label">Air Quality Index </span>
-        <span class="air-quality-index-additional-value">Moderate</span>
-      </span>
+                        <div class="tech-card" data-category="frontend">
+                            <div class="tech-icon">
+                                <i class="devicon-bootstrap-plain colored"></i>
+                            </div>
+                            <span class="tech-name">Bootstrap</span>
+                        </div>
 
-      <span class="real-feel-additional">
-        <span class="real-feel-additional-label">Real Feel </span>
-        <span class="real-feel-additional-value" id="realFeelAdditionalValue">-</span>
-      </span>
+                        <!-- Backend Technologies -->
+                        <div class="tech-card" data-category="backend">
+                            <div class="tech-icon">
+                                <i class="devicon-nodejs-plain colored"></i>
+                            </div>
+                            <span class="tech-name">Node.js</span>
+                        </div>
 
-      <span class="humidity-additional">
-        <span class="humidity-additional-label">Humidity </span>
-        <span class="humidity-additional-value" id="humidityAdditionalValue">-</span>     
-      </span>
+                        <div class="tech-card" data-category="backend">
+                            <div class="tech-icon">
+                                <i class="devicon-express-original colored"></i>
+                            </div>
+                            <span class="tech-name">Express.js</span>
+                        </div>
 
-      <span class="max-temperature-additional">
-        <span class="max-temperature-additional-label">Highest Temperature </span>
-        <span class="max-temperature-additional-value" id="maxTemperatureAdditionalValue">-</span>
-      </span>
+                        <div class="tech-card" data-category="backend">
+                            <div class="tech-icon">
+                                <i class="devicon-python-plain colored"></i>
+                            </div>
+                            <span class="tech-name">Python</span>
+                        </div>
 
-      <span class="min-temperature-additional">
-        <span class="min-temperature-additional-label">Lowest Temperature </span>
-        <span class="min-temperature-additional-value" id="minTemperatureAdditionalValue">-</span>          
-      </span>
-    </div>
+                        <!-- Database Technologies -->
+                        <div class="tech-card" data-category="database">
+                            <div class="tech-icon">
+                                <i class="devicon-mongodb-plain colored"></i>
+                            </div>
+                            <span class="tech-name">MongoDB</span>
+                        </div>
 
-    <div class="additionals-second-row">
-      <span class="wind-speed-additional">
-        <span class="wind-speed-additional-label">Wind Speed </span>       
-        <span class="wind-speed-additional-value" id="windSpeedAdditionalValue">-</span>
-      </span>
+                        <div class="tech-card" data-category="database">
+                            <div class="tech-icon">
+                                <i class="devicon-mysql-plain colored"></i>
+                            </div>
+                            <span class="tech-name">My SQL</span>
+                        </div>
+                        <!-- Tools -->
+                        <div class="tech-card" data-category="tools">
+                            <div class="tech-icon">
+                                <i class="devicon-git-plain colored"></i>
+                            </div>
+                            <span class="tech-name">Git</span>
+                        </div>
 
-      <span class="wind-direction-additional">
-        <span class="wind-direction-additional-label">Wind Direction </span>
-        <span class="wind-direction-additional-value" id="windDirectionAdditionalValue">-</span>
-      </span>
+                        <div class="tech-card" data-category="tools">
+                            <div class="tech-icon">
+                                <i class="devicon-github-original colored"></i>
+                            </div>
+                            <span class="tech-name">GitHub</span>
+                        </div>
 
-      <span class="visibility-additional">
-        <span class="visibility-additional-label">Visibility </span>
-        <span class="visibility-additional-value" id="visibilityAdditionalValue">-</span>
-      </span>
+                        <div class="tech-card" data-category="tools">
+                            <div class="tech-icon">
+                                <i
+                                    class="devicon-amazonwebservices-original colored"></i>
+                            </div>
+                            <span class="tech-name">AWS</span>
+                        </div>
 
-      <span class="pressure-additional">
-        <span class="pressure-additional-label">Pressure </span>       
-        <span class="pressure-additional-value" id="pressureAdditionalValue">-</span>
-      </span>
+                        <!-- Programming Languages -->
+                        <div class="tech-card" data-category="frontend">
+                            <div class="tech-icon">
+                                <i class="devicon-c-plain colored"></i>
+                            </div>
+                            <span class="tech-name">C</span>
+                        </div>
 
-      <span class="sunrise-additional">
-        <span class="sunrise-additional-label">Sunrise </span>
-        <span class="sunrise-additional-value" id="sunriseAdditionalValue">-</span>  
-      </span>
+                        <div class="tech-card" data-category="frontend">
+                            <div class="tech-icon">
+                                <i class="devicon-cplusplus-plain colored"></i>
+                            </div>
+                            <span class="tech-name">C++</span>
+                        </div>
+                    </div>
+                </div>
 
-      <span class="sunset-additional">
-        <span class="sunset-additional-label">Sunset </span>
-        <span class="sunset-additional-value" id="sunsetAdditionalValue">-</span>
-      </span>
-    </div>
+                <!-- Background Effects -->
+                <div class="absolute inset-0 pointer-events-none">
+                    <div
+                        class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/10 to-purple-900/10"></div>
+                    <div class="floating-particles"></div>
+                </div>
+            </section>
 
-    <br>
-    <!-- <div class="separator"></div> -->
+            <!-- Timeline Section -->
+            <section id="timeline" class="section-padding">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title" data-aos="fade-up">My
+                            Journey</h2>
+                        <p class="section-subtitle" data-aos="fade-up"
+                            data-aos-delay="200">
+                            Here are my education qualities and experiences
+                        </p>
+                    </div>
 
-    <div class="daily-forecast">
+                    <div class="timeline-container">
+                        <div class="timeline-line"></div>
 
-      <h2 class="daily-forecast-label">Daily</h2>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">March 2021</div>
+                                <h4>High School Completion</h4>
+                                <p>Completed High School from Swamy Matric Higher Secondary School with 94.16% in HSC Board Examination</p>
+                                <div class="timeline-image">
+                                    <img src="images/school.webp"
+                                        alt="High School"
+                                        class="img-fluid rounded">
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="daily-forecast-card">
-        <p class="daily-forecast-date">Fri 27</p>
-        <div class="daily-forecast-logo"><img class="imgs-as-icons" src="icons/sunny.png"></div>
-        <div class="max-min-temperature-daily-forecast">
-          <span class="max-daily-forecast">37<sup>o</sup>C</span>
-          <span class="min-daily-forecast">25<sup>o</sup>C</span>
-        </div>
-        <p class="weather-type-daily-forecast">Sunny</p>
-      </div>
+                        <div class="timeline-item" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">September 2022</div>
+                                <h4>BE Biomedical Engineering</h4>
+                                <p>Currently pursuing BE in Biomedical Engineering from PSG College of Technology.</p>
+                                <div class="timeline-image">
+                                    <img src="images/cllg.jpg" alt="College"
+                                        class="img-fluid rounded">
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="daily-forecast-card">
-        <p class="daily-forecast-date">Fri 27</p>
-        <div class="daily-forecast-logo"><img class="imgs-as-icons" src="icons/sunny.png"></div>
-        <div class="max-min-temperature-daily-forecast">
-          <span class="max-daily-forecast">37<sup>o</sup>C</span>
-          <span class="min-daily-forecast">25<sup>o</sup>C</span>
-        </div>
-        <p class="weather-type-daily-forecast">Sunny</p>
-      </div>
+                        <div class="timeline-item" data-aos="fade-up"
+                            data-aos-delay="400">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">June 2024</div>
+                                <h4>Summer Internship</h4>
+                                <p>I completed my internship at Providence as part of the CRCA Women and Children team, where I focused on automating key operational processes. My work involved developing a solution to automate patient switches, significantly improving efficiency during transitions. Additionally, I created an automatic alert system to notify teams during the patching of medical equipment, ensuring timely awareness and minimizing risks. 
+                                    These projects were primarily implemented using Selenium and contributed to enhancing patient safety and system reliability.</p>
+                                <div class="timeline-image">
+                                    <img src="images/image.png"
+                                        alt="Python Course"
+                                        class="img-fluid rounded">
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="daily-forecast-card">
-        <p class="daily-forecast-date">Fri 27</p>
-        <div class="daily-forecast-logo"><img class="imgs-as-icons" src="icons/sunny.png"></div>
-        <div class="max-min-temperature-daily-forecast">
-          <span class="max-daily-forecast">37<sup>o</sup>C</span>
-          <span class="min-daily-forecast">25<sup>o</sup>C</span>
-        </div>
-        <p class="weather-type-daily-forecast">Sunny</p>
-      </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <div class="daily-forecast-card">
-        <p class="daily-forecast-date">Fri 27</p>
-        <div class="daily-forecast-logo"><img class="imgs-as-icons" src="icons/sunny.png"></div>
-        <div class="max-min-temperature-daily-forecast">
-          <span class="max-daily-forecast">37<sup>o</sup>C</span>
-          <span class="min-daily-forecast">25<sup>o</sup>C</span>
-        </div>
-        <p class="weather-type-daily-forecast">Sunny</p>
-      </div>
+            <!-- Projects Section -->
+            <section id="projects" class="section-padding bg-light">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title" data-aos="fade-up">💻
+                            Projects</h2>
+                        <p class="section-subtitle" data-aos="fade-up"
+                            data-aos-delay="200">
+                            Here are some of the projects I've worked on
+                        </p>
+                    </div>
+                    <!--Project 1-->
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/github.png"
+                                        alt="GitHub Activity Viewer"
+                                        class="img-fluid">
+                                    <div class="project-overlay">
+                                        <a
+                                            href="https://github.com/yuktaa-gaikwad/GitHub-User-Activity.git"
+                                            class="btn btn-primary">View
+                                            Project</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5> GitHub Activity Viewer GUI </h5>
+                                    <p>Fetches GitHub activity with a pretty GUI
+                                        using Python and GitHub API.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">GUI</span>
+                                        <span class="tech-tag">API</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project 2-->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/facial-recognition (1).png"
+                                        alt="Face recognition"
+                                        class="img-fluid">
+                                    <div class="project-overlay">
+                                        <a
+                                            href="https://github.com/yuktaa-gaikwad/FunnyFaceDetector.git"
+                                            class="btn btn-primary">View
+                                            Project</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>FunnyFaceFilter/Detector</h5>
+                                    <p>A real-time face detection and overlay
+                                        application using OpenCV and Python.
+                                        This project captures video from your
+                                        webcam, detects faces, and applies a
+                                        mustache overlay for fun effects..</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Tkinter</span>
+                                        <span class="tech-tag">GUI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project 3-->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/spamemail.JPG"
+                                        alt="AI Email Classifier"
+                                        class="img-fluid">
+                                    <div class="project-overlay">
+                                        <a
+                                            href="https://github.com/yuktaa-gaikwad/SpamEmailClassifier.git"
+                                            class="btn btn-primary">View
+                                            Project</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5> Spam Email Classifier</h5>
+                                    <p>This project is an AI-based Spam Email
+                                        Filter that automatically detects and
+                                        filters spam emails by analyzing text
+                                        patterns such as keywords, links, and
+                                        other linguistic features.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">ML</span>
+                                        <span class="tech-tag">AI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project 4-->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up"
+                            data-aos-delay="400">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/portfolio.JPG"
+                                        alt="Web Chat App" class="img-fluid">
+                                    <div class="project-overlay">
+                                        <a
+                                            href="https://yuktaa-gaikwad.github.io/Portfolio/"
+                                            class="btn btn-primary">View
+                                            Project</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>Portfolio</h5>
+                                    <p>A Portfolio showing off my qualities ,
+                                        experiences and projects.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">Css</span>
+                                        <span class="tech-tag">Javascript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project 5-->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up"
+                            data-aos-delay="500">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/doccollab.JPG"
+                                        alt="Resume Builder" class="img-fluid">
+                                    <div class="project-overlay">
+                                        <a href="https://doccollab.lovable.app/"
+                                            class="btn btn-primary">View
+                                            Project</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>A Real-Time Collaborative App</h5>
+                                    <p>DocCollab - A real-time collaborative
+                                        document editor application </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">HTML/CSS</span>
+                                        <span class="tech-tag">Templates</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Project 6-->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up"
+                            data-aos-delay="600">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/dashboard.JPG"
+                                        alt="Cosmetic Store App"
+                                        class="img-fluid">
+                                    <div class="project-overlay">
+                                        <a
+                                            href="https://github.com/yuktaa-gaikwad/Weather-Data-and-Forecast-Dashboard-BI.git"
+                                            class="btn btn-primary">View
+                                            Project</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h5>Weather Forecast Dashboard BI</h5>
+                                    <p>A dashboard that shows the weather
+                                        forcast of different cities using
+                                        weather API</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">weather
+                                            API</span>
+                                        <span class="tech-tag">Power BI</span>
+                                        <span class="tech-tag">FlatIcons</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="daily-forecast-card">
-        <p class="daily-forecast-date">Fri 27</p>
-        <div class="daily-forecast-logo"><img class="imgs-as-icons" src="icons/sunny.png"></div>
-        <div class="max-min-temperature-daily-forecast">
-            <span class="max-daily-forecast">37<sup>o</sup>C</span>
-            <span class="min-daily-forecast">25<sup>o</sup>C</span>
-        </div>
-        <p class="weather-type-daily-forecast">Sunny</p>
-      </div>
+                    <!-- Upcoming Projects -->
+                    <div class="text-center mt-5 mb-4">
+                        <h3 class="section-title" data-aos="fade-up">🚧 Upcoming
+                            Projects</h3>
+                    </div>
 
-      <div class="daily-forecast-card">
-        <p class="daily-forecast-date">Fri 27</p>
-        <div class="daily-forecast-logo"><img class="imgs-as-icons" src="icons/sunny.png"></div>
-        <div class="max-min-temperature-daily-forecast">
-          <span class="max-daily-forecast">37<sup>o</sup>C</span>
-          <span class="min-daily-forecast">25<sup>o</sup>C</span>
-        </div>
-        <p class="weather-type-daily-forecast">Sunny</p>
-      </div>
-    </div>
-    
-    <script src="scripts/script.js"></script>
-		<script src="scripts/mobile.js"></script>
-		<br><br><br><br><br>
-  </body>
-      </html>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="upcoming-project-card">
+                                <div class="upcoming-content">
+                                    <h5>Web 3.0 Authentication System</h5>
+                                    <p class="text-muted mb-2">Project Idea:</p>
+                                    <p>Build a Decentralized Login System where
+                                        users authenticate using their MetaMask
+                                        wallet instead of traditional
+                                        usernames/passwords</p>
+                                    <div
+                                        class="project-tech d.flex align-items-center">
+                                        <span class="tech-tag">Web3.js</span>
+                                        <span class="tech-tag">MetaMask</span>
+                                        <span class="tech-tag">Ethereum</span>
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-warning">Stay
+                                        Tuned</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <div class="upcoming-project-card">
+                                <div class="upcoming-content">
+                                    <h5> Real-Time Collaborative Code Editor
+                                        (Cloud + WebSocket)</h5>
+                                    <p class="text-muted mb-2">Project Idea:</p>
+                                    <p> Create a live coding platform where
+                                        multiple users can write, edit, and
+                                        compile code together.Real-time sync and
+                                        Firebase for auth/storage</p>
+                                    <div
+                                        class="project-tech d-flex align-items-center">
+                                        <span class="tech-tag">Socket.io</span>
+                                        <span class="tech-tag">Monaco
+                                            Editor</span>
+                                        <span class="tech-tag">Firebase</span>
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-warning">Stay
+                                        Tuned</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <div class="upcoming-project-card">
+                                <div class="upcoming-content">
+                                    <h5>Voice-Powered Personal Assistant</h5>
+                                    <p class="text-muted mb-2">Project Idea:</p>
+                                    <p> Make your own “Jarvis”-style desktop
+                                        assistant that responds to voice queries
+                                        for reminders, weather, jokes.</p>
+                                    <div
+                                        class="project-tech d-flex align-items-center">
+                                        <span
+                                            class="tech-tag">SpeechRecognition</span>
+                                        <span class="tech-tag">Pyttsx3</span>
+                                        <span class="tech-tag">GPT-4 API</span>
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-warning">Stay
+                                        Tuned</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section-padding contact-section">
+                <div class="container">
+                    <div class="text-center">
+                        <h2 class="section-title text-white mb-4"
+                            data-aos="fade-up">Reach Out</h2>
+                        <p class="lead text-white mb-4" data-aos="fade-up"
+                            data-aos-delay="200">
+                            Let's connect and build something amazing together!
+                        </p>
+                        <h3 class="contact-email" data-aos="fade-up"
+                            data-aos-delay="400">
+                            yuktaa.gaikwad@gmail.com
+                        </h3>
+                        <div class="contact-social" data-aos="fade-up"
+                            data-aos-delay="600">
+                            <a href="https://github.com/yuktaa-gaikwad"
+                                class="social-link" target="_blank">
+                                <i class="fab fa-github"></i> Let's Connect</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Scripts-->
+        <section>
+            <!-- Scripts -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+            <script
+                src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+
+            <script>
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Initialize Vanta Globe
+            VANTA.GLOBE({
+                el: "#vanta-globe",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x3f51b5,
+                backgroundColor: 0x1a1a2e
+            });
+
+            // Typewriter Effect
+            let typedOnce = false;
+            function runTypewriter(text, id) {
+                const element = document.getElementById(id);
+                element.innerHTML = "";
+                let i = 0;
+                function typing() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(typing, 50);
+                    }
+                }
+                typing();
+            }
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+                );
+            }
+
+            window.addEventListener("scroll", function () {
+                const el = document.getElementById("typewriter");
+                if (isElementInViewport(el)) {
+                    if (!typedOnce) {
+                        runTypewriter("About Me", "typewriter");
+                        typedOnce = true;
+                    }
+                }
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Navbar background change on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('mainNav');
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Skill bar animation
+            const animateSkillBars = () => {
+                const skillBars = document.querySelectorAll('.skill-progress');
+                skillBars.forEach(bar => {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width + '%';
+                });
+            };
+
+            // Trigger skill bar animation when skills section is in view
+            const skillsSection = document.getElementById('skills');
+            const observ = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateSkillBars();
+                    }
+                });
+            });
+            observer.observe(skillsSection);
+        </script>
+
+            <script>
+            // Filter functionality
+            const navPills = document.querySelectorAll('.nav-pill');
+            const techCards = document.querySelectorAll('.tech-card');
+
+            navPills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    // Remove active class from all pills
+                    navPills.forEach(p => p.classList.remove('active'));
+                    // Add active class to clicked pill
+                    pill.classList.add('active');
+
+                    const category = pill.getAttribute('data-category');
+                    
+                    // Filter tech cards
+                    techCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'flex';
+                            card.style.animation = 'fadeInUp 0.5s ease forwards';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = Math.random() * 0.5 + 's';
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all tech cards
+            techCards.forEach(card => {
+                observer.observe(card);
+            });
+
+            // Floating particles animation
+            function createParticle() {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = Math.random() * 3 + 2 + 's';
+                particle.style.opacity = Math.random() * 0.5 + 0.2;
+                
+                document.querySelector('.floating-particles').appendChild(particle);
+                
+                setTimeout(() => {
+                    particle.remove();
+                }, 5000);
+            }
+
+            // Create particles periodically
+            setInterval(createParticle, 2000);
+        </script>
+        </section>
+
+        <!--Ending-->
+    </body>
+</html>
